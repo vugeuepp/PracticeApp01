@@ -1,22 +1,22 @@
-<?php 
+<?php
 
 require('../app/functions.php');
 
-  $members = ['Nayeon', 'Jeongyeon', 'Momo'];
+include('../app/_parts/_header.php');
 
 ?>
 
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <title>PHP Practice</title>
-</head>
-<body>
-  <ul>
-    <?php foreach ($members as $member) { ?>
-      <li><?= h($member); ?></li>
-    <?php } ?>
-  </ul>
-</body>
-</html>
+  <form action="result.php" method="get">
+    <label><input type="radio" name="color" value="blue"> Taste of Love</label>
+    <label><input type="radio" name="color" value="fuchsia"> TWICE Coaster LANE1</label>
+    <label><input type="radio" name="color" value="aqua"> PAGE TWO</label>
+    <label><input type="radio" name="color" value="maroon"> Years of 'YES'</label>
+    <label><input type="radio" name="color" value="gray"> EYES WIDE OPEN</label>
+    <label><input type="radio" name="color" value="navy"> SIGNAL</label>
+    <button>Send</button>
+    <a href="reset.php">[reset]</a>
+  </form>
+
+<?php
+
+include('../app/_parts/_footer.php');
